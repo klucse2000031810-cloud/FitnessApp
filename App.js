@@ -7,6 +7,7 @@ import ProfileScreen from './ProfileScreen';
 import DietPlannerScreen from './DietPlannerScreen';
 import MealTrackerScreen from './MealTrackerScreen';
 import WorkoutScreen from './WorkoutScreen';
+import TaskManagerScreen from './TaskManagerScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="DietPlanner" component={DietPlannerScreen} />
         <Stack.Screen name="MealTracker" component={MealTrackerScreen} />
         <Stack.Screen name="Workout" component={WorkoutScreen} />
+        <Stack.Screen name="TaskManager" component={TaskManagerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
