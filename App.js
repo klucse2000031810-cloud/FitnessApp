@@ -11,6 +11,7 @@ import TaskManagerScreen from './TaskManagerScreen';
 import StepCounterScreen from './StepCounterScreen';
 import RewardsScreen from './RewardsScreen';
 import WellbeingScreen from './WellbeingScreen';
+import HomeScreen from './HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="DietPlanner" component={DietPlannerScreen} />
         <Stack.Screen name="MealTracker" component={MealTrackerScreen} />
