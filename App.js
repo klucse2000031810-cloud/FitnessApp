@@ -10,6 +10,7 @@ import WorkoutScreen from './WorkoutScreen';
 import TaskManagerScreen from './TaskManagerScreen';
 import StepCounterScreen from './StepCounterScreen';
 import RewardsScreen from './RewardsScreen';
+import WellbeingScreen from './WellbeingScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Screen name="TaskManager" component={TaskManagerScreen} />
         <Stack.Screen name="StepCounter" component={StepCounterScreen} />
         <Stack.Screen name="Rewards" component={RewardsScreen} />
+        <Stack.Screen name="Wellbeing" component={WellbeingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
