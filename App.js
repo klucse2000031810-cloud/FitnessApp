@@ -14,6 +14,7 @@ import RewardsScreen from './RewardsScreen';
 import WellbeingScreen from './WellbeingScreen';
 import HomeScreen from './HomeScreen';
 import LanguageScreen from './LanguageScreen';
+import TrainerScreen from './TrainerScreen';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +35,7 @@ export default function App() {
           <Stack.Screen name="StepCounter" component={StepCounterScreen} />
           <Stack.Screen name="Rewards" component={RewardsScreen} />
           <Stack.Screen name="Wellbeing" component={WellbeingScreen} />
+          <Stack.Screen name="Trainer" component={TrainerScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </LanguageProvider>
