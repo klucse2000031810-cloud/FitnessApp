@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LanguageProvider } from './LanguageContext';
+import SplashScreen from './SplashScreen';
 import LoginScreen from './LoginScreen';
 import SignUpScreen from './SignUpScreen';
 import ProfileScreen from './ProfileScreen';
@@ -22,20 +23,21 @@ export default function App() {
   return (
     <LanguageProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Language">
-          <Stack.Screen name="Language" component={LanguageScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="SignUp" component={SignUpScreen} />
-          <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
-          <Stack.Screen name="DietPlanner" component={DietPlannerScreen} />
-          <Stack.Screen name="MealTracker" component={MealTrackerScreen} />
-          <Stack.Screen name="Workout" component={WorkoutScreen} />
-          <Stack.Screen name="TaskManager" component={TaskManagerScreen} />
-          <Stack.Screen name="StepCounter" component={StepCounterScreen} />
-          <Stack.Screen name="Rewards" component={RewardsScreen} />
-          <Stack.Screen name="Wellbeing" component={WellbeingScreen} />
-          <Stack.Screen name="Trainer" component={TrainerScreen} />
+        <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Splash" component={SplashScreen} />
+          <Stack.Screen name="Language" component={LanguageScreen} />
+          <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="DietPlanner" component={DietPlannerScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="MealTracker" component={MealTrackerScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="Workout" component={WorkoutScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="TaskManager" component={TaskManagerScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="StepCounter" component={StepCounterScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="Wellbeing" component={WellbeingScreen} options={{ headerShown: true }} />
+          <Stack.Screen name="Trainer" component={TrainerScreen} options={{ headerShown: true }} />
         </Stack.Navigator>
       </NavigationContainer>
     </LanguageProvider>
